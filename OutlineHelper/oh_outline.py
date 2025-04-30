@@ -58,7 +58,7 @@ class OH_OT_Outline_Operator(bpy.types.Operator):
             mat = bpy.data.materials.new(name="OH_Outline_Material")
             mat.use_nodes = True
             mat.use_backface_culling = True
-            mat.shadow_method = "NONE"
+            mat.use_backface_culling_shadow = True
             nodes = mat.node_tree.nodes
             nodes.clear()
             links = mat.node_tree.links
